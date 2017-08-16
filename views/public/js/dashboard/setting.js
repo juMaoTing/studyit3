@@ -10,15 +10,14 @@ define(['jquery','template','jqueryForm'], function($,template) {
     });
     //更新个人资料
     $(".settings").on("click",".updateUser",function(){
-        var haha=$("#userForm").serialize();
+        // var haha=$("#userForm").serialize();
         // haha.JSON.stringify();
-        console.log(haha.split('&'));
+        // console.log(haha.split('&'));
         $("#userForm").ajaxSubmit({
             url:'/api/teacher/modify',
             type:'post',
             success:function(info){
                 alert("更新成功");
-                console.log(info);
             },
             error:function(err){
                 console.log(err);
