@@ -24,4 +24,5 @@ define(['jquery','template','jqueryForm'], function($,template) {
             }
         });
     });
+
 });
