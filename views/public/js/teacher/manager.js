@@ -31,7 +31,7 @@ define(['jquery', 'template', 'jqueryForm'], function ($, template) {
             dataType: 'json',
             success: function (result) {
                 alert("添加成功");
-                location.href = './list'
+                location.href = '/teacher/list'
             },
             error: function (err) {
                 alert("添加失败");
@@ -47,6 +47,7 @@ define(['jquery', 'template', 'jqueryForm'], function ($, template) {
             data:{tc_id:obj.tc_id},
             success:function(info){
                 alert("提交成功");
+                location.href='/teacher/list'
             },
             error:function(err){
                 alert("操作失败");
