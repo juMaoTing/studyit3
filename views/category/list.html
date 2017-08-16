@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
     <?php include '/views/common/css.html' ?>
 </head>
+
 <body>
 
     <!-- 侧边栏 -->
@@ -14,485 +16,619 @@
         <div class="container-fluid">
             <!-- 头部 -->
             <?php include '/views/common/head.html' ?>
-            <div class="body course-category">
-                <!-- 面包屑 -->
-                <ol class="breadcrumb">
-                    <li><a href="javascript:;">课程管理</a></li>
-                    <li class="active">课程分类</li>
-                </ol>
-                <div class="page-title">
-                    <a href="/category/manage" class="btn btn-success btn-sm pull-right">添加分类</a>
-                </div>
-                <div class="panel panel-default">
-                    <table class="table table-bordered" id="categoryList"><thead>
-            <tr>
-                <th width="18%">分类名称</th>
-                <th>课程数量</th>
-                <th>是否显示</th>
-                <th>排序</th>
-                <th width="12%">操作</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr class="active">
-                
-                <td class="text-left">前端开发</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=1" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ HTML/CSS</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=5" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Javascript</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=6" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Mobile</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=7" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ AngularJS</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=24" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Vue</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>6</td>
-                <td>
-                    <a href="/category/manage?cg_id=25" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Bootstrap</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=29" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Vue</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=30" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left">后端开发</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=2" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ PHP</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=8" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ NodeJS</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=9" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Python</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=10" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left">数据库</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=3" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ MySQL</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=11" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ MongoDB</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=12" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Oracle</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=13" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ 云数据</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=20" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ mongodb</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=28" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left">视觉设计</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=4" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Photoshop</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=14" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ 美图秀秀</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>6</td>
-                <td>
-                    <a href="/category/manage?cg_id=26" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ AI</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>5</td>
-                <td>
-                    <a href="/category/manage?cg_id=27" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left">移动开发</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=15" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Android</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=18" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ IOS</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=19" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left">云计算&amp;大数据</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=16" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ 大数据</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=21" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left">运维&amp;测试</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=17" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ 测试</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=22" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr>
-                
-                <td class="text-left">&nbsp;&nbsp;├ Linux</td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=23" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left"></td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=31" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-            <tr class="active">
-                
-                <td class="text-left"></td>
-                
-                <td>12</td>
-                
-                <td>否</td>
-                
-                <td>10</td>
-                <td>
-                    <a href="/category/manage?cg_id=32" class="btn btn-info btn-xs">编辑</a>
-                </td>
-            </tr>
-            
-        </tbody></table>
+
+            <div class="container-fluid">
+
+                <div class="body course-category">
+                    <!-- 面包屑 -->
+                    <ol class="breadcrumb">
+                        <li><a href="javascript:;">课程管理</a></li>
+                        <li class="active">课程分类</li>
+                    </ol>
+                    <div class="page-title">
+                        <a href="/category/manage" class="btn btn-success btn-sm pull-right">添加分类</a>
+                    </div>
+                    <div class="panel panel-default">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th width="18%">分类名称</th>
+                                    <th>课程数量</th>
+                                    <th>是否显示</th>
+                                    <th>排序</th>
+                                    <th width="12%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="categoryList">
+
+                                <!-- <tr class="active">
+
+                                    <td class="text-left">前端开发</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=1" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ HTML/CSS</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=5" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Javascript</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=6" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Mobile</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=7" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ AngularJS</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=24" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Vue</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>6</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=25" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Bootstrap</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=29" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Vue</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=30" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left">后端开发</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=2" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ PHP</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=8" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ NodeJS</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=9" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Python</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=10" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left">数据库</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=3" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ MySQL</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=11" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ MongoDB</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=12" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Oracle</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=13" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ 云数据</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=20" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ mongodb</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=28" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left">视觉设计</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=4" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Photoshop</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=14" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ 美图秀秀</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>6</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=26" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ AI</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>5</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=27" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left">移动开发</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=15" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Android</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=18" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ IOS</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=19" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left">云计算&amp;大数据</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=16" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ 大数据</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=21" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left">运维&amp;测试</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=17" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ 测试</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=22" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td class="text-left">&nbsp;&nbsp;├ Linux</td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=23" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left"></td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=31" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr>
+
+                                <tr class="active">
+
+                                    <td class="text-left"></td>
+
+                                    <td>12</td>
+
+                                    <td>否</td>
+
+                                    <td>10</td>
+                                    <td>
+                                        <a href="/category/manage?cg_id=32" class="btn btn-info btn-xs">编辑</a>
+                                    </td>
+                                </tr> -->
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+
+
+
         </div>
     </div>
 
     <?php include '/views/common/script.html' ?>
-    
+    <script type="template/html" id="tlpCategory">
+        {{each result as value index}}
+        <tr class="active">
+            <input type="hidden" name="" value="{{value.cg_id}}">
+            <td class="text-left">{{value.cg_name}}</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id="{{value.cg_id}}" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+            <tr>
+            <td class="text-left">&nbsp;&nbsp;├ HTML/CSS</td>
+            <td>12</td>
+            <td>否</td>
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=5" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        {{/each}}
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ HTML/CSS</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=5" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ Javascript</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=6" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ Mobile</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=7" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ AngularJS</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=24" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ Vue</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>6</td>
+            <td>
+                <a href="/category/manage?cg_id=25" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ Bootstrap</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=29" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td class="text-left">&nbsp;&nbsp;├ Vue</td>
+
+            <td>12</td>
+
+            <td>否</td>
+
+            <td>10</td>
+            <td>
+                <a href="/category/manage?cg_id=30" class="btn btn-info btn-xs">编辑</a>
+            </td>
+        </tr>
+    </script>
     <script>
-        require(['js/teacher/manager']);
+        require(['js/category/list']);
     </script>
 </body>
+
 </html>
