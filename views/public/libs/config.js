@@ -2,6 +2,7 @@ require.config({
         baseUrl:'/views/public',
         paths:{
             'jquery':'assets/jquery/jquery.min',
+            'jqueryForm':'assets/jquery-form/jquery.form',
             'bootstrap':'assets/bootstrap/js/bootstrap.min',
             'template':'assets/artTemplate/template',
             'nprogress':'assets/nprogress/nprogress',
