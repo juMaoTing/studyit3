@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+     <link rel = "stylesheet"  href = "/views/public/assets/uploadify/uploadify.css" / > 
+    <script  src="/views/public/assets/jquery/jquery.js"></script>
+    <script  src="/views/public/assets/uploadify/jquery.uploadify.js"></script>
+</head>
+<body>
+    <input type="file" name="" value="" id="fileData">
+</body>
+</html>
+<script>
+    $("#fileData").uploadify({
+        'swf':'uploadify.swf',
+        'uploader':'/views/public/php/aa.php',
+        'width':100,
+        'height':100
+    });
+</script>

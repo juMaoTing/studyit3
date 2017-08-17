@@ -10,6 +10,8 @@ require.config({
             'cookie':'assets/jquery-cookie/jquery.cookie',
             'datepicker':'assets/bootstrap-datepicker/js/bootstrap-datepicker',
             'datepickercn':'assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+            // 'uploadify':'assets/uploadify/jquery.uploadify',
+            'uploadify': 'assets/uploadify/jquery.uploadify',
             'common':'js/dashboard/common',
             'login':'js/dashboard/login'
         },
@@ -19,7 +21,11 @@ require.config({
             },
             'datepickercn':{
                 deps:['jquery']
+            },
+            'uploadify':{
+                deps:['jquery']
             }
+        
         }
 });
     /**

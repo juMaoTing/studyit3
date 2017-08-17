@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <title>学IT - 后台管理系统</title>
     <?php include '/views/common/css.html' ?>
+     <!-- <link rel = "stylesheet"  href = "/views/public/assets/uploadify/uploadify.css" / >   -->
+    <!-- <script  src="/views/public/assets/jquery/jquery.js"></script>
+    <script  src="/views/public/assets/uploadify/jquery.uploadify.js"></script> -->
 </head>
 
 <body>
@@ -130,7 +133,7 @@
                 <label for="" class="col-md-3 control-label">头像</label>
                 <div class="col-md-2 preview">
                     <img src="{{tc_avatar==" "?"/views/public/images/default.png ":tc_avatar}}">
-                    <input type="file" id="upfile">
+                    <input name="tc_avatar" type="file" id="upfile">
                     <div class="cover">
                         <i class="fa fa-upload"></i>
                     </div>

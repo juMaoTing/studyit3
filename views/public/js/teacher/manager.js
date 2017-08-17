@@ -26,11 +26,6 @@ define(['jquery', 'template', 'datepicker', 'datepickercn', 'jqueryForm'], funct
                 });
             }
         });
-        // console.log($("input[name=tc_join_date]").val());
-        // $("input[name=tc_join_date]").on('click',function(){
-        //     alert(123);
-        // });
-
         ajaxSubmit('/api/teacher/update');
     } else {
         var managerList = template("managerList", {
