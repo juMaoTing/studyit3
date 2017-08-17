@@ -1,4 +1,4 @@
-define(['jquery', 'template', 'jqueryForm', 'uploadify','datepicker','datepickercn'], function ($, template, jqueryForm, uploadify,datepicker,datepickercn) {
+define(['jquery', 'template', 'jqueryForm', 'uploadify','datepicker','datepickercn','region','ckeditor'], function ($, template, jqueryForm, uploadify,datepicker,datepickercn,region,ckeditor) {
     //获取个人资料
     $.ajax({
         url: '/api/teacher/profile',
@@ -27,6 +27,20 @@ define(['jquery', 'template', 'jqueryForm', 'uploadify','datepicker','datepicker
                 format:'yyyy/mm/dd',
                 language:'zh-CN'
             });
+            //省市区三级联动
+            $("#region").region({
+                url:'/views/public/assets/jquery-region/region.json'
+            });
+            //富文本编辑
+            CKEDITOR.replace('introduce',{
+            toolbarGroups:[
+                { name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
+                { name: 'links' },
+                { name: 'document',    groups: [ 'mode', 'document', 'doctools' ] },
+                { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+                { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] }
+                ]
+        })
         }
     });
     //更新个人资料
@@ -34,6 +48,7 @@ define(['jquery', 'template', 'jqueryForm', 'uploadify','datepicker','datepicker
         // var haha=$("#userForm").serialize();
         // haha.JSON.stringify();
         // console.log(haha.split('&'));
+        $("#introduce").val(CKEDITOR.instances.introduce.getData());
         $("#userForm").ajaxSubmit({
             url: '/api/teacher/modify',
             type: 'post',
