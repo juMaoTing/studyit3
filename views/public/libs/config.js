@@ -8,11 +8,16 @@ require.config({
             'nprogress':'assets/nprogress/nprogress',
             'echarts':'assets/echarts/echarts.min',
             'cookie':'assets/jquery-cookie/jquery.cookie',
+            'datepicker':'assets/bootstrap-datepicker/js/bootstrap-datepicker',
+            'datepickercn':'assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
             'common':'js/dashboard/common',
             'login':'js/dashboard/login'
         },
         shim:{
             'bootstrap':{
+                deps:['jquery']
+            },
+            'datepickercn':{
                 deps:['jquery']
             }
         }

@@ -8,7 +8,7 @@ define(['jquery','cookie'],function($){
                 dataType:'json',
                 data:data,
                 success:function(result){
-                    // alert("登录成功...");
+                    alert("登录成功...");
                     $.cookie('tcInfo',JSON.stringify(result.result));
                     location.href='/';
                 },
